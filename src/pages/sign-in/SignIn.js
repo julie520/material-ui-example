@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Container,
-  CssBaseline,
   Avatar,
   Typography,
   TextField,
@@ -9,18 +9,15 @@ import {
   Checkbox,
   Button,
   Grid,
-  Link,
-  Box
+  Link as MuiLink
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Copyright from "../../common/copyright/Copyright";
 import { useStyles } from "./sign-in.styles";
 
 const SignIn = () => {
   const classes = useStyles();
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
@@ -66,21 +63,18 @@ const SignIn = () => {
           </Button>
           <Grid Container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <MuiLink to="/" variant="body2" component={Link}>
                 Forgot password?
-              </Link>
+              </MuiLink>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <MuiLink to="/signup" variant="body2" component={Link}>
                 {"Don't have and accout? Sign Up"}
-              </Link>
+              </MuiLink>
             </Grid>
           </Grid>
         </form>
       </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
     </Container>
   );
 };

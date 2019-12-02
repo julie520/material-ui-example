@@ -1,11 +1,6 @@
 import React, { Fragment } from "react";
-import { useStyles } from "./home.styles";
 import {
-  CssBaseline,
-  AppBar,
-  Toolbar,
   Typography,
-  Link,
   Button,
   Container,
   Grid,
@@ -16,7 +11,7 @@ import {
 } from "@material-ui/core";
 import StarIcon from "@material-ui/icons/StarBorder";
 import { StylesProvider } from "@material-ui/styles";
-import Footer from "../../common/footer/Footer";
+import { useStyles } from "./home.styles";
 
 const tiers = [
   {
@@ -63,58 +58,6 @@ const Home = () => {
   return (
     <StylesProvider injectFirst>
       <Fragment>
-        <CssBaseline />
-        <AppBar
-          position="static"
-          color="default"
-          elevation={0}
-          className={classes.appBar}
-        >
-          <Toolbar className={classes.toolbar}>
-            <Typography
-              variant="h6"
-              color="inherit"
-              noWrap
-              className={classes.toolbarTitle}
-            >
-              JulieWith.me
-            </Typography>
-            <nav>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Features
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Enterprise
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Support
-              </Link>
-            </nav>
-            <Button
-              href="#"
-              color="primary"
-              variant="outlined"
-              className={classes.link}
-            >
-              Login
-            </Button>
-          </Toolbar>
-        </AppBar>
         {/* Hero unit */}
         <Container
           maxWidth="sm"
@@ -202,7 +145,6 @@ const Home = () => {
             ))}
           </Grid>
         </Container>
-        <Footer />
       </Fragment>
     </StylesProvider>
   );
