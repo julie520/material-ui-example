@@ -12,12 +12,7 @@ import { useStyles } from "./header.styles";
 const Header = () => {
   const classes = useStyles();
   return (
-    <AppBar
-      position="static"
-      color="default"
-      elevation={0}
-      className={classes.appBar}
-    >
+    <AppBar position="relative">
       <Toolbar className={classes.toolbar}>
         <Typography
           variant="h6"
@@ -30,25 +25,34 @@ const Header = () => {
         <nav>
           <MuiLink
             variant="button"
-            color="textPrimary"
-            to="/"
+            color="inherit"
+            to="/blog"
             className={classes.link}
             component={Link}
           >
-            Features
+            Blog
           </MuiLink>
           <MuiLink
             variant="button"
-            color="textPrimary"
-            to="/"
+            color="inherit"
+            to="/album"
             className={classes.link}
             component={Link}
           >
-            Enterprise
+            Album
           </MuiLink>
           <MuiLink
             variant="button"
-            color="textPrimary"
+            color="inherit"
+            to="/pricing"
+            className={classes.link}
+            component={Link}
+          >
+            Pricing
+          </MuiLink>
+          <MuiLink
+            variant="button"
+            color="inherit"
             to="/checkout"
             className={classes.link}
             component={Link}
@@ -58,7 +62,7 @@ const Header = () => {
         </nav>
         <Button
           to="/signin"
-          color="primary"
+          color="inherit"
           variant="outlined"
           className={classes.link}
           component={Link}

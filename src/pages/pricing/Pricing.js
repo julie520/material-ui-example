@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import StarIcon from "@material-ui/icons/StarBorder";
 import { StylesProvider } from "@material-ui/styles";
-import { useStyles } from "./home.styles";
+import { useStyles } from "./pricing.styles";
 import Header from "../../components/header/Header";
 
 const tiers = [
@@ -53,8 +53,7 @@ const tiers = [
     buttonVariant: "outlined"
   }
 ];
-
-const Home = () => {
+const Pricing = () => {
   const classes = useStyles();
   return (
     <StylesProvider injectFirst>
@@ -152,4 +151,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Pricing;

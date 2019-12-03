@@ -1,13 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(theme => ({
-  toolbar: {
-    flexWrap: "wrap"
+  card: {
+    display: "flex"
   },
-  toolbarTitle: {
-    flexGrow: 1
+  cardDetails: {
+    flex: 1
   },
-  link: {
-    margin: theme.spacing(1, 1.5)
+  cardMedia: {
+    width: 160
   }
 }));

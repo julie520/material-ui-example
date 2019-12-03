@@ -10,8 +10,22 @@ export const useStyles = makeStyles(theme => ({
       listStyle: "none"
     }
   },
+  heroContent: {
+    padding: theme.spacing(8, 0, 6)
+  },
+  cardHeader: {
+    backgroundColor:
+      theme.palette.type === "dark"
+        ? theme.palette.grey[700]
+        : theme.palette.grey[200]
+  },
+  cardPricing: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "baseline",
+    marginBottom: theme.spacing(2)
+  },
   footer: {
-    backgroundColor: theme.palette.backgroud,
     borderTop: `1px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(8),
     paddingTop: theme.spacing(3),

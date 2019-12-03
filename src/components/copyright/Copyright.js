@@ -5,10 +5,11 @@ import Link from "@material-ui/core/Link";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      &copy; {new Date().getFullYear()}{" "}
+      Copyright &copy;{" "}
       <Link color="inherit" href="https://material-ui.com">
         JulieWith.me
-      </Link>
+      </Link>{" "}
+      {new Date().getFullYear()}
     </Typography>
   );
 }

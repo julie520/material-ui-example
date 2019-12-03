@@ -1,13 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(theme => ({
-  toolbar: {
-    flexWrap: "wrap"
+  listItem: {
+    padding: theme.spacing(1, 0)
   },
-  toolbarTitle: {
-    flexGrow: 1
+  total: {
+    fontWeight: "700"
   },
-  link: {
-    margin: theme.spacing(1, 1.5)
+  title: {
+    marginTop: theme.spacing(2)
   }
 }));
